@@ -218,16 +218,4 @@ write.nexus(asr_tree, file = paste0("asr_no_root_l1000_lineagegrp_",tree_id,".ne
 branch_transitions<-data.table::rbindlist(pbmclapply(1:length(asr_tree), tree_to_df,mc.cores=no_cores,ignore.interactive = T))
 write.table(branch_transitions,paste0("./lineagegrp_",tree_id,"_branch_transitions.txt"),row.names = FALSE,sep="\t",quote = FALSE)
 
-path_length_transitions<-branch_transitions[grepl("_",branch_transitions$md5sum_descendant),]
-path_length_transitions<-path_length_transitions[,c(4,9:15)]
-path_length_transitions$total_path_length<-path_length_transitions$transition_path_length + path_length_transitions$constant_path_length + path_length_transitions$na_path_length
-path_length_transitions<-path_length_transitions[!((path_length_transitions$tumor_id != "T") & (path_length_transitions$no_transitions == 0)),]
-write.table(path_length_transitions,paste0("./lineagegrp_",tree_id,"_path_length_transitions.txt"),row.names = FALSE,sep="\t",quote = FALSE)
-
-median_path_length_transitions<-aggregate(path_length_transitions[, c(2:6,9)], list(path_length_transitions$md5sum_descendant), median)
-median_path_length_transitions$tumor_id<-as.character(lapply(median_path_length_transitions$Group.1,list_formatting))
-write.table(median_path_length_transitions,paste0("./lineagegrp_",tree_id,"_median_path_length_transitions.txt"),row.names = FALSE,sep="\t",quote = FALSE)
-
-
-
 
