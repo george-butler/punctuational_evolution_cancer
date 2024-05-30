@@ -96,6 +96,7 @@ transition_branch_formating<-function(labeled_data,asr_tree,labeled_tree,tip){
     m[(m$location_descendant != "T") & (!is.na(m$location_descendant)),]$location_descendant<-"M"
   }
   m$transition_branch<-m$location_descendant != m$location_parent
+  row.names(m)<-1:nrow(m)
   return(m)
 }
 
