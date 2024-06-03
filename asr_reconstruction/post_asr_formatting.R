@@ -146,7 +146,7 @@ partioned_path_length<-function(data){
     df[tip_idx$idx[i],]$transition_path_length<-sum(tmp[!is.na(tmp$transition_branch) & tmp$transition_branch == "TRUE",]$branch.length,na.rm=TRUE)
     df[tip_idx$idx[i],]$constant_path_length<-sum(tmp[!is.na(tmp$transition_branch) & tmp$transition_branch == "FALSE",]$branch.length,na.rm=TRUE)
     df[tip_idx$idx[i],]$na_path_length<-sum(tmp[is.na(tmp$transition_branch),]$branch.length,na.rm=TRUE)
-    df[tip_idx$idx[i],]$no_nodes<-(nrow(tmp)-1)
+    df[tip_idx$idx[i],]$no_nodes<-nrow(tmp)
     df[tip_idx$idx[i],]$no_transitions<-nrow(tmp[!is.na(tmp$transition_branch) & tmp$transition_branch == "TRUE",])
     df[tip_idx$idx[i],]$tumor_id<-tail(tmp$location_descendant,1)
   }
