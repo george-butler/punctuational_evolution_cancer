@@ -1,5 +1,6 @@
 # Punctuational evolution is pervasive in distal site metastatic colonization 
 
+<!--- 
 ### George Butler<sup>1,</sup>, Sarah R. Amend<sup>1</sup>, Robert Axelrod<sup>2</sup>, Chris Venditti<sup>3</sup>, Kenneth J. Pienta<sup>1</sup>
 
 <sup><sup>1</sup>Cancer Ecology Center, The Brady Urological Institute, Johns Hopkins School of Medicine, Baltimore, MD, USA</sup>
@@ -7,6 +8,7 @@
 <sup><sup>2</sup>Geral R. Ford School of Public Policy, University of Michigan, Ann Arbor, MI, USA</sup>
 
 <sup><sup>3</sup>School of Biological Sciences, University of Reading, Reading, UK</sup>
+-->
 
 <p align="center">
   <img width="380" height="355" src="/example_image/lineage_example.png">
