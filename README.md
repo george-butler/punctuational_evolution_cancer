@@ -14,6 +14,8 @@
   <img width="380" height="355" src="/example_image/lineage_example.png">
 </p>
 
+Our paper is available [here](https://royalsocietypublishing.org/doi/10.1098/rspb.2024.2850)
+
 The majority of the code is written in R with the remainder written in Python. A run file and relevant example date is provided where necessary within the relavent directories. Large portions of code are designed to run on a UNIX machine and take advantage of multiple threads where possible. If you wish to run this code of a Windows machine please change the "pbmclapply" function to "lapply" in the R scripts with the understanding that this will increase the run time considerably.
 
 A compiled version of the program BayesTraits is included in the directories where needed. The source code for BayesTraits is available here [here](https://www.evolution.reading.ac.uk/BayesTraitsV4.1.1/BayesTraitsV4.1.1.html)
